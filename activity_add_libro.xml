@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="horizontal">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:src="@drawable/vidali"
+           android:background="#1B6592"
+           />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="20dp" android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="10px"
+        android:textColor="#316282"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etname"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Editorial"
+           android:textSize="20dp"
+           android:layout_marginTop="10px"
+           android:layout_marginLeft="10px"
+           android:layout_marginRight="10px"
+           android:textColor="#316282"
+           android:textStyle="bold"/>
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/eteditorial"
+           android:layout_marginLeft="10px"
+           android:layout_marginRight="10px"
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Género"
+           android:textSize="20dp"
+           android:layout_marginTop="10px"
+           android:layout_marginLeft="10px"
+           android:layout_marginRight="10px"
+           android:textColor="#316282"
+           android:textStyle="bold"/>
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/etgenero"
+           android:layout_marginLeft="10px"
+           android:layout_marginRight="10px"
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Precio"
+           android:textSize="20dp"
+           android:layout_marginTop="10px"
+           android:layout_marginLeft="10px"
+           android:layout_marginRight="10px"
+           android:textColor="#316282"
+           android:textStyle="bold"/>
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/etprecio"
+           android:layout_marginBottom="10px"
+           android:layout_marginLeft="10px"
+           android:layout_marginRight="10px"
+           />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="1"
+           android:layout_marginBottom="10dp">
+           <RadioGroup
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/radioGroup"
+               android:orientation="horizontal"
+               android:checkedButton="3"
+               android:layout_marginLeft="10px"
+               android:layout_marginRight="10px"
+               >
+
+           <CheckBox
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Intercambio"
+               android:layout_weight="0.3"
+               android:id="@+id/cbinter"
+               android:onClick="onCheckboxClicked"
+
+               />
+           <CheckBox
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Venta"
+               android:layout_weight="0.3"
+               android:id="@+id/cbventa"
+               android:onClick="onCheckboxClicked"/>
+           <CheckBox
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Ambas"
+               android:layout_weight="0.3"
+               android:id="@+id/cbambos"
+               android:onClick="onCheckboxClicked"/>
+        </RadioGroup>
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1">
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Foto"
+               android:id="@+id/btgallery"
+               android:enabled="true"
+               android:textSize="15dp"
+               android:layout_marginTop="5dp"
+               android:gravity="center"
+               android:layout_marginBottom="10px"
+               android:background="@drawable/borde"
+               android:drawableTop="@drawable/ic_menu_camera"
+               android:layout_weight="0.5"
+               android:layout_marginLeft="10dp"
+               android:textColor="#fcfcfc" android:layout_marginRight="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subir"
+                android:id="@+id/btcargar"
+                android:layout_marginTop="5dp"
+                android:enabled="true"
+                android:textSize="15dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/borde"
+                android:layout_weight="0.5"
+                android:drawableTop="@drawable/ic_menu_send"
+                android:textColor="#fcfcfc" />
+        </LinearLayout>
+           <ImageView
+
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:background="#1B6592"
+               android:id="@+id/ivShow"
+               android:layout_marginTop="10px"
+               android:layout_gravity="center_horizontal|top"
+               android:layout_marginBottom="30px"
+               />
+
+       </LinearLayout>
+   </LinearLayout>
+</ScrollView>
+
+</LinearLayout>
+
